@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid my-3">
+   <h1>Feed Back</h1>
+   <form action="/student/feedback/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name" name="name">
+      </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email </label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+    </div>
+    
+   
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Feed Back</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+  </form>
+   
+{% endblock %}

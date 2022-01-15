@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<table>
+    <tr>
+       
+        <td>Name</td>
+        <td>Email</td>
+        <td>Roll number</td>
+        <td>College Name</td>
+        <td>Phone Number</td>
+
+    </tr>
+    {% for i in message %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.rollno}}</td>
+        <td>{{i.college}}</td>
+        <td>{{i.phoneno}}</td>
+
+        
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
